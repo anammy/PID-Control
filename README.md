@@ -17,6 +17,10 @@ The video of the steering PID and throttle PD controllers in action can be viewe
 
 Strategies to try in the future include switching gain values from a table of different Kp, Ki, and Kd values that are calibrated for different road conditions such as straight roads and sharp curves. Improvements in gain tuning and controller performance might also be achieved by including the actual time difference between cross-track error (cte) values reported by the simulator. 
 
+## Code
+
+The default Udacity code directory structure and starter code were used. The files `main.cpp`, `PID.h`, and `PID.cpp` were editted to implement the PID controller and hyperparameter tuning.
+
 ## Dependencies
 
 * cmake >= 3.5
