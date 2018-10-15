@@ -3,17 +3,19 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-##Objective
+## Objective
 
 The purpose of this project was to build a PID controller to successfully drive the car around the track. 
 
-##Controller Design
+## Controller Design
 
 The car's steering and throttle were controlled using PID and PD controllers, respectively. While keeping the car's throttle constant, the steering PID controller hyperparameters were tuned manually first to get the car to roughly drive around the track and then, further fine-tuned using Twiddle to smoothen the drive. Then the throttle PD controller was manually tuned and fine-tuned using Twiddle to slow down and smoothen the drive around sharp corners. The final car throttle was set to 'constant value + PD-controller input'.
 
-A PID controller was chosen for the steering because a proportional-only controller caused the car to oscillate from side-to-side and eventually, become unstable and drive off the road. See video of the behaviour of a P-only controller here. The oscillatory behaviour of the P-only steering controller was stabilized by adding in the derivative control component. With a PD controller, the car is able to drive successfully around the track. See video of the behaviour of the PD-only controller here. The integral control component was added to compensate for any persistent disturbances/errors in the steering control.
+A PID controller was chosen for the steering because a proportional-only controller caused the car to oscillate from side-to-side and eventually, become unstable and drive off the road. See video of the behaviour of a P-only controller [here](https://github.com/anammy/PID-Control/blob/master/videos/P_only.mp4). The oscillatory behaviour of the P-only steering controller was stabilized by adding in the derivative control component. With a PD controller, the car is able to drive successfully around the track. See video of the behaviour of the PD-only controller [here](https://github.com/anammy/PID-Control/blob/master/videos/PDonly_.mp4). The integral control component was added to compensate for any persistent disturbances/errors in the steering control.
 
-The video of the steering PID and throttle PD controllers in action can be viewed here.
+The video of the steering PID and throttle PD controllers in action can be viewed [here](https://github.com/anammy/PID-Control/blob/master/videos/PID_.mp4).
+
+Strategies to try in the future include switching gain values from a table of different Kp, Ki, and Kd values that are calibrated for different road conditions such as straight roads and sharp curves. Improvements in gain tuning and controller performance might also be achieved by including the actual time difference between cross-track error (cte) values reported by the simulator. 
 
 ## Dependencies
 
